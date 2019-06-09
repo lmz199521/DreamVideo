@@ -22,7 +22,7 @@ abstract class BaseFragment:Fragment(),AnkoLogger{
     /**
      * ftagment 初始化
      */
-    protected fun init() {
+    open protected fun init() {
 
     }
 
@@ -47,7 +47,7 @@ abstract class BaseFragment:Fragment(),AnkoLogger{
      *  不是必须实现的，
      *  主要进行 adapter 和listener 相关操作
      */
-    protected fun initlistener() {
+    open protected fun initlistener() {
 
     }
 
@@ -60,7 +60,7 @@ abstract class BaseFragment:Fragment(),AnkoLogger{
      * toast 方法
      * 避免出现现成问题
      */
-    fun myToast(msg:String){
+    open fun myToast(msg:String){
         context!!.runOnUiThread { toast(msg) }
     }
 }
